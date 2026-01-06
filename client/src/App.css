@@ -1,0 +1,515 @@
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.App-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.App-header h1 {
+  color: #333;
+  margin: 0 0 15px 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.nav-links a {
+  color: #3498db;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.nav-links a:hover {
+  background-color: #e3f2fd;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-link:hover h3 {
+  color: #3498db;
+}
+
+.product-card h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.product-info {
+  margin-bottom: 15px;
+}
+
+.product-info p {
+  margin: 5px 0;
+}
+
+.price {
+  font-weight: bold;
+  color: #2c5aa0;
+  font-size: 1.2em;
+}
+
+.stock-info {
+  color: #666;
+}
+
+.stock-low {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.stock-out {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.view-btn {
+  background-color: #95a5a6;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  flex: 1;
+}
+
+.view-btn:hover {
+  background-color: #7f8c8d;
+}
+
+.reserve-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  flex: 2;
+}
+
+.reserve-btn.large {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 18px;
+}
+
+.reserve-btn:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.reserve-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.product-detail {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.back-link {
+  color: #3498db;
+  text-decoration: none;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.product-detail-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail-card h1 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.product-detail-info {
+  margin-bottom: 30px;
+}
+
+.product-detail-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.reservation-section {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.quantity-selector {
+  margin-bottom: 20px;
+}
+
+.quantity-selector label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.quantity-selector select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.checkout-page {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.checkout-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-info {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.reservation-info p {
+  margin: 5px 0;
+}
+
+.checkout-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.checkout-btn {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.checkout-btn.confirm {
+  background-color: #00b894;
+  color: white;
+}
+
+.checkout-btn.confirm:hover:not(:disabled) {
+  background-color: #00a085;
+}
+
+.checkout-btn.cancel {
+  background-color: #e17055;
+  color: white;
+}
+
+.checkout-btn.cancel:hover:not(:disabled) {
+  background-color: #d63031;
+}
+
+.checkout-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.reservation-timer {
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.timer-display {
+  font-size: 2em;
+  font-weight: bold;
+  color: #e17055;
+  margin: 10px 0;
+}
+
+.timer-expired {
+  color: #d63031;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.success-message {
+  background-color: #e8f5e8;
+  color: #2e7d32;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.expired-message {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffebee;
+  border-radius: 5px;
+}
+
+/* Confirmation Page Styles */
+.confirmation-page,
+.cancellation-page {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.confirmation-card,
+.cancellation-card {
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-card.success {
+  background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+  border: 2px solid #4caf50;
+}
+
+.cancellation-card.cancelled {
+  background: linear-gradient(135deg, #fff3e0 0%, #fef7f0 100%);
+  border: 2px solid #ff9800;
+}
+
+.confirmation-card.error,
+.cancellation-card.error {
+  background: linear-gradient(135deg, #ffebee 0%, #fef5f5 100%);
+  border: 2px solid #f44336;
+}
+
+.success-icon,
+.cancel-icon {
+  font-size: 4em;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.confirmation-card h2,
+.cancellation-card h2 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.order-summary,
+.cancellation-summary {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 30px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.order-summary h3,
+.cancellation-summary h3 {
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.order-info,
+.cancellation-info {
+  text-align: left;
+}
+
+.order-info p,
+.cancellation-info p {
+  margin: 8px 0;
+  padding: 5px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-info p:last-child,
+.cancellation-info p:last-child {
+  border-bottom: none;
+}
+
+.confirmation-message,
+.cancellation-message {
+  margin: 30px 0;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.confirmation-message p,
+.cancellation-message p {
+  margin: 10px 0;
+}
+
+.confirmation-actions,
+.cancellation-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.continue-btn,
+.retry-btn,
+.print-btn,
+.back-btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.continue-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.continue-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.retry-btn {
+  background-color: #2196f3;
+  color: white;
+}
+
+.retry-btn:hover {
+  background-color: #1976d2;
+  transform: translateY(-2px);
+}
+
+.print-btn {
+  background-color: #9e9e9e;
+  color: white;
+}
+
+.print-btn:hover {
+  background-color: #757575;
+  transform: translateY(-2px);
+}
+
+.back-btn {
+  background-color: #ff9800;
+  color: white;
+}
+
+.back-btn:hover {
+  background-color: #f57c00;
+  transform: translateY(-2px);
+}
+
+/* Print styles */
+@media print {
+
+  .confirmation-actions,
+  .cancellation-actions {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .confirmation-card,
+  .cancellation-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+
+  .confirmation-page,
+  .cancellation-page {
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .confirmation-card,
+  .cancellation-card {
+    padding: 20px;
+  }
+
+  .confirmation-actions,
+  .cancellation-actions {
+    flex-direction: column;
+  }
+
+  .continue-btn,
+  .retry-btn,
+  .print-btn,
+  .back-btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
